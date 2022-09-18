@@ -84,12 +84,12 @@ def main():
 		quit = False
 		while not quit:
 			menu_input = input('Menu Options: \n'
-		                    '1 - Get headers'
-		                    '2 - Get Document Structure'
-		                    '3 - Get Links'
-		                    '4 - Get Email Addresses'
-		                    '5 - Search by HTML Tag'
-		                    '6 - Quit')
+		                    '1 - Get headers \n'
+		                    '2 - Get Document Structure \n'
+		                    '3 - Get Links \n'
+		                    '4 - Get Email Addresses \n'
+		                    '5 - Search by HTML Tag \n'
+		                    '6 - Quit \n')
 			try:
 				menu_input = int(menu_input)
 				if menu_input < 1 or menu_input > 6:
