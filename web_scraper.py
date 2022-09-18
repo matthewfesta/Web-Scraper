@@ -2,12 +2,25 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def get_headers():
-	pass
+def get_headers(url_result):
+	"""
+	Get headers to verify correct page
+	:return:
+	"""
+	for key, value in url_result.headers.items():
+		print(key, ":", value)
 
 
-def get_structure():
-	pass
+def get_structure(url_result):
+	"""
+	Retrieves the structure of the page
+	:param url_result:
+	:return:
+	"""
+	src = url_result.content  # Extract the content and store it in a variable
+	# Create soup object to parse and process the source
+	soup = BeautifulSoup(src, "html.parser")
+	print(f'Page Structure: \n {soup.prettify()}')
 
 
 def get_links():
@@ -50,7 +63,7 @@ else:
 			print('Invalid Input')
 		else:
 			if menu_input == 1:
-				get_headers()
+				get_headers(result)
 			elif menu_input == 2:
 				get_structure()
 			elif menu_input == 3:
@@ -63,11 +76,6 @@ else:
 				quit = True
 
 
-	)  # Make sure page is accessible
-	# Get headers to verify correct page
-	for key, value in result.headers.items():
-		print(key, ":", value)
-print('\n')
 src = result.content  # Extract the content and store it in a variable
 # Create soup object to parse and process the source
 soup = BeautifulSoup(src, "html.parser")
