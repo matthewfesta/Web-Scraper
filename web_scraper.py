@@ -6,4 +6,6 @@ result = requests.get("https://www.google.com/")
 print(result.status_code)  # Make sure page is accessible
 print(result.headers)  # Get headers to verify correct page
 src = result.content  # Extract the content and store it in a variable
+# Create soup object to parse and process the source
+soup = BeautifulSoup(src, 'lxml')
 
