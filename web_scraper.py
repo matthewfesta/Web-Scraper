@@ -2,6 +2,13 @@ import requests
 from bs4 import BeautifulSoup
 
 def menu_options():
+	print('Menu Options: \n'
+	      '1 - Get headers'
+	      '2 - Get Document Structure'
+	      '3 - Get Links'
+	      '4 - Get Email Addresses'
+	      '5 - Search by HTML Tag'
+	      '6 - Quit')
 	pass
 def get_headers():
 	pass
