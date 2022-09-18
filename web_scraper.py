@@ -1,6 +1,20 @@
 import requests
 from bs4 import BeautifulSoup
 
+def menu_options():
+	pass
+def get_headers():
+	pass
+def get_structure():
+	pass
+def get_links():
+	pass
+def get_emails():
+	pass
+def get_tag():
+	pass
+
+
 # Capture the URL as a result variable
 
 url_input = input('Enter URL: \n')
@@ -8,11 +22,13 @@ try:
 	result = requests.get(url_input)
 except:
 	print('Invalid URL', url_input)
-
-print(f'Status Code: \n {result.status_code}')  # Make sure page is accessible
-# Get headers to verify correct page
-for key, value in result.headers.items():
-	print(key, ":", value)
+else:
+	quit = False
+	while not quit:
+	print(f'Status Code: \n {result.status_code}')  # Make sure page is accessible
+	# Get headers to verify correct page
+	for key, value in result.headers.items():
+		print(key, ":", value)
 print('\n')
 src = result.content  # Extract the content and store it in a variable
 # Create soup object to parse and process the source
